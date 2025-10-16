@@ -1,0 +1,29 @@
+DROP TABLE IF EXISTS `author`;
+CREATE TABLE `author` (
+  `idAuthor` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `lastName` varchar(50) NOT NULL,
+  `biography` text NOT NULL,
+  PRIMARY KEY (`idAuthor`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+DROP TABLE IF EXISTS `book`;
+CREATE TABLE `book` (
+  `idBook` int NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `author` varchar(25) NOT NULL,
+  `publicationYear` int NOT NULL,
+  `isbn` varchar(25) NOT NULL,
+  PRIMARY KEY (`idBook`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
+
+
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user` (
+  `idUser` int NOT NULL AUTO_INCREMENT,
+  `name` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `password` varchar(50) NOT NULL,
+  PRIMARY KEY (`idUser`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
